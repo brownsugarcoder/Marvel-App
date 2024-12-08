@@ -6,7 +6,14 @@ import '../assets/style/search.css';
  const Search = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [characterName, setCharacterName] = useState("");
-         
+     
+    const timeStamp = new Date().getTime();
+    const hash = generateHash(timeStamp);
+
+};
+ const generateHash =(timeStamp) => {
+    return md5(timeStamp + publicKey + privateKey);
+ }
     
     const handleSubmit = () => {
         console.log("Search for:", searchQuery);

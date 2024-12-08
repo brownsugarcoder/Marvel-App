@@ -1,6 +1,5 @@
-import '../assets/style/search.css';
 import React, { useState } from 'react';
-
+import '../assets/style/search.css';
 
 //export default function search (){
     

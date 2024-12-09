@@ -7,8 +7,12 @@ const Navbar = () => {
         <header>
             <nav className="navbar">
                 <ul>
-                    <li><a href="/"></a></li>
-                    <li><a href="about"></a></li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="search">Search</a>
+                    </li>
                 </ul>
             </nav>
         </header>

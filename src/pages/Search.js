@@ -3,18 +3,21 @@ import md5 from "md5";
 import '../assets/style/search.css';
 
 //export default function search (){
-    
- const Search = () => {
+
+const API_URL= process.env.REACT_APP_API_KEY_BASE_URL;
+
+const Search = () => {
+    let baseUrl = `${API_URL}/vh1/public/characters`
     //const [searchQuery, setSearchQuery] = useState("");
     const [characterName, setCharacterName] = useState("");
     const [characterData, setCharacterData] = useState(null);
      
 
 const generateHash =(timeStamp) => {
-    const publicKey = "afd3b1ec3a319b8d5637dce0cb107083";
-    const privateKey = " ";
+    const publicKey = process.env.REACT_APP_API_KEY
+    const privateKey = process.env.REACT_APP_PRIVATE_KEY
     return md5(timeStamp + publicKey + privateKey);
-
+    let url = `${baseUrl}?ts=${timeStamp}&apikey=${publicKey}&hash=${hash}&nameStartsWith=${value}`
 }; 
 
    // const hash = generateHash(timeStamp);

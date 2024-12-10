@@ -24,25 +24,24 @@ const Search = () => {
     
     //let url = `${baseUrl}?`
 
-}; 
 
 //When Submit button is clicked
-const handleSubmit = async () => {
-    if (characterName) {
-        setLoading(true);
-        try {
-          const response = await axios.get(
-            `https://gateway.marvel.com:443/v1/public/characters?name=${characterName}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
-          );
-          setCharacterName(response.data.data.results || []);
-        } catch (error) {
-            console.error("Error searching recipes", error);
-        } finally {
-            setLoading(false);
+    const handleSubmit = async () => {
+        if (characterName) {
+            setLoading(true);
+            try {
+            const response = await axios.get(
+                `https://gateway.marvel.com:443/v1/public/characters?name=${characterName}&ts=${ts}&apikey=${publicKey}&hash=${hash}`
+            );
+            setCharacterName(response.data.data.results || []);
+            } catch (error) {
+                console.error("Error searching recipes", error);
+            } finally {
+                setLoading(false);
         }
     }
 };
-
+}
 /* return (
     <div className="search">
         <h2>Marvel Characters</h2>

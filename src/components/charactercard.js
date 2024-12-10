@@ -3,7 +3,7 @@ import React from 'react';
 const Charactercard = ({children}) => {
     return (
         <div className="character-card">{children} 
-            <h2>  Hello world </h2>
+            <h2>  testing character card </h2>
         </div>
     );
 };
